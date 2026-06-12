@@ -98,21 +98,19 @@ const team = [
   {
     name: "Jack Levy",
     role: "Founder & Lead Teacher",
-    bio: "For over two decades, Jack has worked with thousands of people around the world. He guides people to recognize the unconscious patterns that keep them trapped so they can live with clarity and freedom.",
-    image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=320&q=80",
+    bio: "Over two decades of deep study, Jack has developed precise insights into the intricate details of human psychology. He guides people to recognize the unconscious patterns that keep them trapped so they can live with clarity and freedom.",
+    image: "/jack.png",
   },
   {
     name: "Laila Frotjold",
     role: "Curriculum & Experience Designer",
-    bio: "Laila translates deep psychological insight into clear frameworks and powerful practices that make transformation practical and lasting.",
-    image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=320&q=80",
+    bio: "Laila is an experienced space holder and expert workshop facilitator. She will be our guide through the entire journey.",
+    image: "/laila2.png",
   },
   {
     name: "Itzel Chela",
     role: "Operations & Guest Experience",
-    bio: "Itzel holds the space with warmth, intuition, and attention to detail, ensuring you feel supported every step of the way.",
+    bio: "Itzel holds ceremonial space and workshops with warmth, intuition, and attention to detail, ensuring you feel supported every step of the way.",
     image:
       "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=320&q=80",
   },
