@@ -24,49 +24,64 @@ const testimonials = [
 
 const differentiators = [
   {
-    icon: "◐",
+    icon: "/symbols/1-see.png",
     title: "We teach people how to see.",
     text: "Our curriculum reveals the unconscious patterns that shape your thoughts, emotions, and behavior.",
   },
   {
-    icon: "❋",
+    icon: "/symbols/2-plant-medicine.png",
     title: "Plant medicine as support.",
     text: "We don't view plant medicine as the transformation itself. We use it as a tool to go deeper, with preparation, intention, and integration.",
   },
   {
-    icon: "◎",
+    icon: "/symbols/3-community.png",
     title: "Intimate and safe space.",
     text: "A small group held by trust, confidentiality, and a shared commitment to truth and growth.",
   },
   {
-    icon: "◌",
+    icon: "/symbols/4-psychology.png",
     title: "Psychology. Not spirituality.",
     text: "We work in the dimension of consciousness. No dogma, no ideology. Just insight, responsibility, and choice.",
   },
   {
-    icon: "△",
+    icon: "/symbols/5-integration.png",
     title: "Integration that lasts.",
     text: "You leave with practical tools and a new way of living so the insights become your life.",
   },
 ];
 
 const journeySteps = [
-  ["Arrive & Exhale", "Land, settle in, and open."],
-  ["Seeing Reality More Clearly", "Begin to observe yourself and your mind."],
+  ["Arrive & Exhale", "Land, settle in, and open.", "/symbols-2/1-tree.png"],
+  [
+    "Seeing Reality More Clearly",
+    "Begin to observe yourself and your mind.",
+    "/symbols-2/2-sunrise.png",
+  ],
   [
     "Seeing the Patterns",
     "Recognize the conditioning and patterns that shape your life.",
+    "/symbols-2/3-talking.png",
   ],
   [
     "Seeing With Compassion",
     "Plant medicine ceremony to go deeper with support and safety.",
+    "/symbols-2/4-compassion-2.png",
   ],
   [
     "Integration",
     "Make sense of what you've seen. Connect, share, and reflect.",
+    "/symbols-2/5-integration-2.png",
   ],
-  ["Living Consciously", "Explore new ways of being and choosing."],
-  ["Returning Home", "Bring clarity back into your everyday life."],
+  [
+    "Living Consciously",
+    "Explore new ways of being and choosing.",
+    "/symbols-2/6-meditation.png",
+  ],
+  [
+    "Returning Home",
+    "Bring clarity back into your everyday life.",
+    "/symbols-2/7-mountains.png",
+  ],
 ];
 
 const exploreItems = [
@@ -239,7 +254,15 @@ export default function Home() {
         <div className="featureGrid">
           {differentiators.map((item) => (
             <article key={item.title} className="featureCard">
-              <div className="featureIcon">{item.icon}</div>
+              <div className="featureIcon">
+                <Image
+                  src={item.icon}
+                  alt=""
+                  width={72}
+                  height={72}
+                  className="featureIconImage"
+                />
+              </div>
               <h3>{item.title}</h3>
               <p>{item.text}</p>
             </article>
@@ -249,11 +272,19 @@ export default function Home() {
 
       <section className="journeySection" id="journey">
         <div className="journeyInner section">
-          <SectionEyebrow>The Journey</SectionEyebrow>
+          <h2 className="journeyHeading">The Journey</h2>
           <div className="journeyTrack">
-            {journeySteps.map(([title, text], index) => (
+            {journeySteps.map(([title, text, icon]) => (
               <article key={title} className="journeyStep">
-                <div className="journeyNumber">{index + 1}</div>
+                <div className="journeyNumber">
+                  <Image
+                    src={icon}
+                    alt=""
+                    width={68}
+                    height={68}
+                    className="journeyIconImage"
+                  />
+                </div>
                 <h3>{title}</h3>
                 <p>{text}</p>
               </article>
