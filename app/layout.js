@@ -1,6 +1,9 @@
 import "./globals.css";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+
 export const metadata = {
+  metadataBase: new URL(siteUrl),
   title: "SEE Retreat",
   description: "A 7-day transformational retreat landing page.",
   icons: {
@@ -13,10 +16,10 @@ export const metadata = {
     description: "A 7-day transformational retreat landing page.",
     images: [
       {
-        url: "/logo.png",
-        width: 1254,
-        height: 1254,
-        alt: "SEE Retreat logo",
+        url: "/social-preview.png",
+        width: 1200,
+        height: 630,
+        alt: "SEE Retreat social preview",
       },
     ],
   },
@@ -24,7 +27,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "SEE Retreat",
     description: "A 7-day transformational retreat landing page.",
-    images: ["/logo.png"],
+    images: ["/social-preview.png"],
   },
 };
 
