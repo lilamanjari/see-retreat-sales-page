@@ -87,6 +87,14 @@ img {
 }
 
 .topNav {
+  z-index: 200;
+}
+
+.heroContent {
+  z-index: 10;
+}
+
+.topNav {
   width: min(1240px, calc(100% - 48px));
   margin: 0 auto;
   display: flex;
@@ -133,6 +141,10 @@ img {
   opacity: 0.92;
 }
 
+.mobileNav {
+  display: none;
+}
+
 .heroContent {
   width: min(1240px, calc(100% - 48px));
   display: grid;
@@ -162,7 +174,7 @@ img {
 
 .heroSubheading {
   margin: 0;
-  font-size: 1.02rem;
+  font-size: 0.8rem;
 }
 
 .heroDivider {
@@ -303,6 +315,10 @@ img {
   margin-top: 52px;
 }
 
+.mobileTestimonials {
+  display: none;
+}
+
 .testimonialCard {
   position: relative;
   padding: 18px 46px 0 78px;
@@ -384,6 +400,12 @@ img {
   margin-top: 4px;
   display: block;
   font-size: 0.9rem;
+}
+
+.testimonialSwiper,
+.testimonialRailCard,
+.testimonialPagination {
+  display: none;
 }
 
 .founder {
@@ -798,13 +820,93 @@ img {
   }
 
   .topNav {
-    flex-direction: column;
-    gap: 18px;
+    align-items: center;
   }
 
-  .navLinks {
-    justify-content: flex-start;
-    gap: 12px 16px;
+  .desktopNav {
+    display: none;
+  }
+
+  .mobileNav {
+    display: block;
+    margin-left: auto;
+    position: relative;
+    z-index: 1000;
+  }
+
+  .hamburgerButton {
+    position: relative;
+    z-index: 1100;
+    list-style: none;
+    width: 52px;
+    height: 52px;
+    border: 1px solid rgba(250, 248, 242, 0.38);
+    background: rgba(10, 20, 16, 0.34);
+    backdrop-filter: blur(10px);
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 0;
+    color: var(--off-white);
+  }
+
+  .hamburgerButton::-webkit-details-marker {
+    display: none;
+  }
+
+  .hamburgerButton span {
+    width: 18px;
+    height: 1.5px;
+    background: currentColor;
+    transition: transform 180ms ease, opacity 180ms ease;
+  }
+
+  .mobileNav[open] .hamburgerButton span:nth-child(1) {
+    transform: translateY(6.5px) rotate(45deg);
+  }
+
+  .mobileNav[open] .hamburgerButton span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobileNav[open] .hamburgerButton span:nth-child(3) {
+    transform: translateY(-6.5px) rotate(-45deg);
+  }
+
+  .mobileMenu {
+    position: fixed;
+    top: 84px;
+    right: 16px;
+    min-width: 220px;
+    padding: 14px;
+    display: grid;
+    gap: 8px;
+    background: rgba(10, 20, 16, 0.92);
+    border: 1px solid rgba(200, 169, 107, 0.4);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-8px);
+    transition: opacity 180ms ease, transform 180ms ease;
+    z-index: 1050;
+  }
+
+  .mobileNav[open] .mobileMenu {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .mobileMenu a {
+    padding: 12px 14px;
+    color: var(--off-white);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.8rem;
+    border: 1px solid rgba(250, 248, 242, 0.08);
+    background: rgba(250, 248, 242, 0.04);
   }
 
   .heroContent {
@@ -813,10 +915,9 @@ img {
   }
 
   .heroQuote {
-    font-size: clamp(2.1rem, 9vw, 3.2rem);
+    font-size: clamp(1.6rem, 5vw, 3.2rem);
   }
 
-  .testimonialGrid,
   .founder,
   .exploreCopy,
   .teamGrid,
@@ -826,23 +927,79 @@ img {
     grid-template-columns: 1fr;
   }
 
-  .testimonialCard {
-    border-left: 0;
-    padding: 18px 0 28px 58px;
-    border-bottom: 1px solid rgba(200, 169, 107, 0.3);
+  .desktopTestimonials {
+    display: none;
   }
 
-  .testimonialCard:first-child {
-    padding-left: 58px;
+  .mobileTestimonials {
+    display: block;
+    margin-top: 44px;
   }
 
-  .testimonialCard:last-child {
-    border-bottom: 0;
-    padding-bottom: 0;
+  .testimonialSwiper {
+    display: block;
+    width: 100%;
   }
 
-  .testimonialCard .quoteMark {
-    left: 0;
+  .testimonialRailCard {
+    display: block;
+    position: relative;
+    min-width: 0;
+    padding: 20px 22px 28px 64px;
+    background: rgba(250, 248, 242, 0.82);
+    border-left: 1px solid rgba(200, 169, 107, 0.32);
+  }
+
+  .testimonialRailCard .quoteMark {
+    display: block;
+    position: absolute;
+    left: 10px;
+    top: 2px;
+    color: var(--gold);
+    font-family: var(--font-heading), serif;
+    font-size: 5rem;
+    line-height: 0.72;
+  }
+
+  .testimonialRailCard p {
+    margin: 0;
+    max-width: 24ch;
+    font-size: 1.02rem;
+    line-height: 1.85;
+  }
+
+  .testimonialRailCard strong {
+    display: block;
+    margin-top: 24px;
+    font-size: 0.92rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .testimonialRailCard span:last-child {
+    display: block;
+    margin-top: 4px;
+    font-size: 0.9rem;
+    color: rgba(42, 42, 42, 0.74);
+  }
+
+  .testimonialPagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 18px;
+  }
+
+  .testimonialPagination .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px !important;
+    background: rgba(31, 58, 50, 0.18);
+    opacity: 1;
+  }
+
+  .testimonialPagination .swiper-pagination-bullet-active {
+    background: var(--gold);
   }
 
   .featureCard {
@@ -859,7 +1016,13 @@ img {
   }
 
   .exploreText {
+    width: min(100% - 32px, 1200px);
+    margin: 0 auto;
     padding: 48px 0 32px;
+  }
+
+  .exploreCopy {
+    width: 100%;
   }
 
   .exploreList {
@@ -885,17 +1048,21 @@ img {
   .brandSubtitle,
   .heroKicker,
   .heroSubheading,
-  .eyebrow,
-  .navLinks a {
-    letter-spacing: 0.16em;
+  .eyebrow {
+    letter-spacing: 0em;
   }
 
   .hero h1 {
     font-size: 4.8rem;
   }
 
-  .heroMeta strong {
+  .heroDescription {
     font-size: 1rem;
+    line-height: 1.55;
+  }
+
+  .heroMeta strong {
+    font-size: 0.8rem;
   }
 
   .intro,
@@ -909,7 +1076,11 @@ img {
   .intro h2,
   .differentiators h2,
   .founder h2 {
-    font-size: 2.75rem;
+    font-size: 2rem;
+  }
+
+  .testimonialRailCard {
+    padding-right: 18px;
   }
 
   .playButton {

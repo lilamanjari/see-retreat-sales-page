@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { CalendarDays, MapPin } from "lucide-react";
+import TestimonialCarousel from "./components/TestimonialCarousel";
 
 const testimonials = [
   {
@@ -40,7 +41,7 @@ const differentiators = [
   },
   {
     icon: "/symbols/4-psychology.png",
-    title: "Psychology. Not spirituality.",
+    title: "Precise psychology.",
     text: "We work in the dimension of consciousness. No dogma, no ideology. Just insight, responsibility, and choice.",
   },
   {
@@ -53,18 +54,18 @@ const differentiators = [
 const journeySteps = [
   ["Arrive & Exhale", "Land, settle in, and open.", "/symbols-2/1-tree.png"],
   [
-    "Seeing Reality More Clearly",
-    "Begin to observe yourself and your mind.",
+    "Breaking The Illusion",
+    "SEE the person you became and how you create reality.",
     "/symbols-2/2-sunrise.png",
   ],
   [
-    "Seeing the Patterns",
-    "Recognize the conditioning and patterns that shape your life.",
+    "Deeper Truth",
+    "SEE the patterns and reclaim your power.",
     "/symbols-2/3-talking.png",
   ],
   [
-    "Seeing With Compassion",
-    "Plant medicine ceremony to go deeper with support and safety.",
+    "Free Yourself",
+    "SEE through the compassionate lens of psilocybin, going deeper with support and safety.",
     "/symbols-2/4-compassion-2.png",
   ],
   [
@@ -74,7 +75,7 @@ const journeySteps = [
   ],
   [
     "Living Consciously",
-    "Explore new ways of being and choosing.",
+    "SEE the life you actually want to live.",
     "/symbols-2/6-meditation.png",
   ],
   [
@@ -132,6 +133,15 @@ const quickDetails = [
   ],
 ];
 
+const navLinks = [
+  { href: "#overview", label: "Overview" },
+  { href: "#journey", label: "The Journey" },
+  { href: "#about", label: "About" },
+  { href: "#location", label: "Location" },
+  { href: "#details", label: "Details" },
+  { href: "#apply", label: "Apply" },
+];
+
 function SectionEyebrow({ children }) {
   return <p className="eyebrow">{children}</p>;
 }
@@ -153,23 +163,41 @@ export default function Home() {
             <span className="brandTitle">Human Project</span>
             <span className="brandSubtitle">The Art of Being Human</span>
           </div>
-          <nav className="navLinks" aria-label="Section navigation">
-            <a href="#overview">Overview</a>
-            <a href="#journey">The Journey</a>
-            <a href="#about">About</a>
-            <a href="#location">Location</a>
-            <a href="#details">Details</a>
-            <a href="#apply">Apply</a>
+          <nav className="navLinks desktopNav" aria-label="Section navigation">
+            {navLinks.map((link) => (
+              <a key={link.href} href={link.href}>
+                {link.label}
+              </a>
+            ))}
           </nav>
+
+          <details className="mobileNav" data-mobile-nav>
+            <summary
+              className="hamburgerButton"
+              aria-label="Toggle navigation menu"
+            >
+              <span />
+              <span />
+              <span />
+            </summary>
+            <nav className="mobileMenu" aria-label="Mobile section navigation">
+              {navLinks.map((link) => (
+                <a key={link.href} href={link.href}>
+                  {link.label}
+                </a>
+              ))}
+            </nav>
+          </details>
         </header>
 
         <div className="heroContent">
           <h1>SEE</h1>
           <p className="heroSubheading">A 7-day transformational retreat</p>
           <div className="heroDivider" />
+          <p className="heroQuote">We suffer because we cannot see clearly.</p>
           <p className="heroQuote">
-            We suffer because we cannot see clearly. When we learn to see
-            clearly, we gain the freedom to choose differently.
+            When we learn to see clearly, we gain the freedom to choose
+            differently.
           </p>
           <p className="heroDescription">
             SEE is an immersive retreat that helps you recognize the unconscious
@@ -184,7 +212,6 @@ export default function Home() {
               </span>
               <div>
                 <strong>Aug 31 - Sep 6, 2025</strong>
-                <span>First week of September 2025</span>
               </div>
             </div>
             <div>
@@ -193,7 +220,6 @@ export default function Home() {
               </span>
               <div>
                 <strong>Santa Maria del Oro, Mexico</strong>
-                <span>Nayarit</span>
               </div>
             </div>
           </div>
@@ -208,16 +234,7 @@ export default function Home() {
         <h2>
           Transformation happens when you truly <em>see.</em>
         </h2>
-        <div className="testimonialGrid">
-          {testimonials.map((item) => (
-            <article key={item.author} className="testimonialCard">
-              <span className="quoteMark">“</span>
-              <p>{item.quote}</p>
-              <strong>{item.author}</strong>
-              <span>{item.role}</span>
-            </article>
-          ))}
-        </div>
+        <TestimonialCarousel testimonials={testimonials} />
       </section>
 
       <section className="section founder" id="about">
@@ -227,12 +244,28 @@ export default function Home() {
             Why we created <em>SEE.</em>
           </h2>
           <p>
-            For over two decades, we&apos;ve worked with thousands of people
-            around the world. The patterns are always the same. We created SEE
-            to offer a space where those patterns can finally be seen and
-            transformed.
+            We believe humanity is suffering not from a lack of intelligence,
+            technology, or resources, but from a lack of self-awareness.
           </p>
-          <p>Watch this short video from Jack to learn more.</p>
+          <p>
+            We have learned how to build companies, nations, technologies, and
+            economies. Yet few of us have been taught how to understand
+            ourselves.
+          </p>
+          <p>
+            As a result, we live from conditioning we cannot see, repeat
+            patterns we do not understand, and create suffering for ourselves,
+            our relationships, and the world around us.
+          </p>
+          <p>
+            Seeing this, it's difficult NOT to share this program. It seems like
+            the only responsible thing to do.
+          </p>
+          <p>
+            We want YOU to have this knowledge. We want everyone to have it!
+          </p>
+          <p>And it starts here.</p>
+          <p>Watch this short video to learn more:</p>
           <p className="signature">Jack Levy</p>
           <a href="#apply" className="buttonSecondary">
             <span className="buttonPlayIcon" aria-hidden="true" />
@@ -386,7 +419,7 @@ export default function Home() {
             Apply Now
           </a>
           <p className="applyNote">
-            Spots are limited. Applications close July 15, 2025.
+            Spots are limited! Reserve your spot today.
           </p>
         </article>
       </section>
