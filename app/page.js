@@ -5,21 +5,21 @@ import TestimonialCarousel from "./components/TestimonialCarousel";
 const testimonials = [
   {
     quote:
-      "I've done a lot of personal development work, but SEE was the first time I truly understood the patterns running my life. It changed everything.",
-    author: "David R.",
-    role: "Entrepreneur, USA",
+      "This is a process that will touch you - it touches the heart, it touches the mind and it shows you how to truly live.",
+    author: "Jorge Serratos",
+    role: "Podcast host and founder of Sinergético, HIT retreat participant",
   },
   {
     quote:
-      "The combination of deep psychological insight and the medicine ceremony allowed me to see things I couldn't see on my own. Profound.",
-    author: "Marie L.",
-    role: "Executive Coach, Canada",
+      "The ego wants you to fight for your insecurities. What will change if you choose peace before winning?",
+    author: "Oswaldo Sánchez",
+    role: "Former soccer player, HIT retreat participant",
   },
   {
     quote:
-      "I left with more clarity in one week than I've had in years. I finally feel free to choose differently.",
-    author: "James K.",
-    role: "Father & Business Owner, UK",
+      "There are certain questions everyone should ask themselves. These teachings stimulate an internal change that will benefit anyone, professionally and personally.",
+    author: "Alicia Villaseñor",
+    role: "Real Estate Entrepreneur, HIT retreat participant",
   },
 ];
 
@@ -151,8 +151,8 @@ export default function Home() {
     <main className="page-shell">
       <section className="hero" id="overview">
         <Image
-          src="/HeroArt.png"
-          alt="Sunset over a lush mountain lake retreat setting"
+          src="/Santa-Maria-Del-Oro.webp"
+          alt="Lagoon surrounded by lush mountains"
           fill
           priority
           className="heroImage"
@@ -239,7 +239,7 @@ export default function Home() {
 
       <section className="section founder" id="about">
         <div className="founderCopy">
-          <SectionEyebrow>A Message From Our Founder</SectionEyebrow>
+          <SectionEyebrow>From the creators of HIT:</SectionEyebrow>
           <h2>
             Why we created <em>SEE.</em>
           </h2>
