@@ -682,6 +682,18 @@ img {
   color: var(--off-white);
 }
 
+.teamSectionInner {
+  padding: 72px 0;
+}
+
+.teamHeading {
+  font-size: clamp(2.6rem, 4vw, 4.25rem);
+  text-align: left;
+  color: var(--off-white);
+  line-height: 1.02;
+  margin: 0 0 40px;
+}
+
 .teamGrid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -719,9 +731,179 @@ img {
   margin-top: 4px;
 }
 
+.settingSection {
+  position: relative;
+  min-height: 520px;
+  overflow: hidden;
+}
+
+.settingOverlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(6, 14, 11, 0.8) 0%,
+      rgba(6, 14, 11, 0.5) 38%,
+      rgba(6, 14, 11, 0.18) 68%,
+      rgba(6, 14, 11, 0.32) 100%
+    ),
+    linear-gradient(180deg, rgba(7, 12, 10, 0.08), rgba(7, 12, 10, 0.4));
+}
+
+.settingInner {
+  position: relative;
+  z-index: 1;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+}
+
+.settingSection .detailHeading,
+.settingSection .detailDivider,
+.settingSection p {
+  position: relative;
+  z-index: 1;
+}
+
+.settingSection .detailHeading {
+  color: var(--off-white);
+}
+
+.settingSection .detailDivider {
+  background: linear-gradient(
+    90deg,
+    rgba(200, 169, 107, 0) 0%,
+    rgba(200, 169, 107, 0.95) 24%,
+    rgba(200, 169, 107, 0.95) 76%,
+    rgba(200, 169, 107, 0) 100%
+  );
+}
+
+.settingCopy {
+  width: min(520px, 100%);
+  padding: 64px 0 64px 24px;
+  color: rgba(250, 248, 242, 0.9);
+}
+
+.settingCopy h3 {
+  margin: 0 0 18px;
+  font-family: var(--font-heading), serif;
+  font-size: clamp(2.2rem, 3.5vw, 3.8rem);
+  font-weight: 500;
+  line-height: 1.12;
+  color: rgba(250, 248, 242, 0.9);
+}
+
+.settingCopy p {
+  line-height: 1.8;
+}
+
+.settingSerifText {
+  font-family: var(--font-heading), serif;
+  font-size: clamp(1.55rem, 2vw, 2rem);
+  line-height: 1.28;
+}
+
+.roomSection {
+  background: linear-gradient(180deg, var(--off-white), #f5eedf);
+  padding: 72px 0 0;
+}
+
+.roomIntro {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.roomIntro h2 {
+  font-size: clamp(2.6rem, 4vw, 4.25rem);
+  color: var(--forest);
+  line-height: 1.02;
+}
+
+.roomIntro p {
+  width: min(760px, 100%);
+  margin: 22px auto 0;
+  line-height: 1.9;
+  font-size: 1.05rem;
+}
+
+.roomSplit {
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
+  align-items: stretch;
+}
+
+.roomSplitReverse .roomImageWrap {
+  order: 2;
+}
+
+.roomSplitReverse .roomCopy {
+  order: 1;
+  padding: 68px 24px 68px 56px;
+}
+
+.roomImageWrap {
+  position: relative;
+  min-height: 540px;
+}
+
+.roomCopy {
+  padding: 68px 0 68px 56px;
+  align-self: center;
+}
+
+.roomEyebrow {
+  margin: 0 0 14px;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.82rem;
+}
+
+.roomCopy h3 {
+  margin: 0;
+  font-family: var(--font-heading), serif;
+  font-size: clamp(2.15rem, 3vw, 3.2rem);
+  font-weight: 500;
+  line-height: 0.98;
+  color: var(--forest);
+}
+
+.roomDescription {
+  margin: 20px 0 0;
+  font-size: 1.04rem;
+  line-height: 1.8;
+}
+
+.roomAmenities {
+  list-style: none;
+  margin: 28px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 16px;
+}
+
+.roomAmenities li {
+  position: relative;
+  padding-left: 34px;
+  line-height: 1.7;
+}
+
+.roomAmenities li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--gold);
+  font-family: var(--font-heading), serif;
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
 .detailsSection {
   display: grid;
-  grid-template-columns: 1fr 1.05fr 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0;
   align-items: stretch;
 }
@@ -931,6 +1113,18 @@ img {
     grid-template-columns: 1fr;
   }
 
+  .roomSplit {
+    grid-template-columns: 1fr;
+  }
+
+  .roomSplitReverse .roomImageWrap {
+    order: initial;
+  }
+
+  .roomSplitReverse .roomCopy {
+    order: -1;
+  }
+
   .desktopTestimonials {
     display: none;
   }
@@ -1025,6 +1219,45 @@ img {
     padding: 48px 0 32px;
   }
 
+  .settingSection {
+    min-height: 460px;
+  }
+
+  .settingInner {
+    min-height: 460px;
+    align-items: flex-end;
+  }
+
+  .settingCopy {
+    width: min(100%, 420px);
+    padding: 48px 0 40px;
+  }
+
+  .roomSection {
+    padding-top: 56px;
+  }
+
+  .roomIntro {
+    width: min(100% - 32px, 1200px);
+    margin: 0 auto;
+    padding-bottom: 28px;
+  }
+
+  .roomCopy {
+    width: min(100% - 32px, 1200px);
+    margin: 0 auto;
+    padding: 40px 0 48px;
+    order: -1;
+  }
+
+  .roomSplitReverse .roomCopy {
+    padding: 40px 0 48px;
+  }
+
+  .roomImageWrap {
+    min-height: 360px;
+  }
+
   .exploreCopy {
     width: 100%;
   }
@@ -1072,9 +1305,38 @@ img {
   .intro,
   .differentiators,
   .founder,
-  .teamGrid,
   .detailsSection {
     padding: 56px 0;
+  }
+
+  .teamSectionInner {
+    padding: 56px 0;
+  }
+
+  .settingSection {
+    min-height: 400px;
+  }
+
+  .settingInner {
+    min-height: 400px;
+  }
+
+  .settingCopy {
+    padding: 40px 0 32px;
+  }
+
+  .roomIntro h2,
+  .roomCopy h3 {
+    font-size: 2.2rem;
+  }
+
+  .roomIntro p,
+  .roomDescription {
+    font-size: 1rem;
+  }
+
+  .roomImageWrap {
+    min-height: 300px;
   }
 
   .intro h2,

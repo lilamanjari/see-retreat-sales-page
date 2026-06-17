@@ -126,11 +126,11 @@ const team = [
 const quickDetails = [
   ["Aug 31 - Sep 6, 2025", "First week of September 2025"],
   ["Tepic Airport (TPQ)", "Approx. 30 min to retreat center"],
-  ["$2,222 USD", "Early bird until July 15: $1,999 USD"],
   [
-    "Includes",
-    "Accommodation, meals, airport transfers, ceremonies, and more.",
+    "From $2,222 USD (Double occupancy)",
+    "Early bird until July 15: $1,999 USD",
   ],
+  ["Includes", "Accommodation, meals, ceremonies, and more."],
 ];
 
 const navLinks = [
@@ -347,7 +347,9 @@ export default function Home() {
       </section>
 
       <section className="teamSection">
-        <div className="section teamGrid">
+        <div className="section teamSectionInner">
+          <h2 className="teamHeading">The Team</h2>
+          <div className="teamGrid">
           {team.map((member) => (
             <article key={member.name} className="teamCard">
               <div className="teamAvatar">
@@ -369,32 +371,99 @@ export default function Home() {
               </div>
             </article>
           ))}
+          </div>
         </div>
       </section>
 
-      <section className="detailsSection section" id="location">
-        <article className="detailBlock">
-          <h2 className="detailHeading">The Setting</h2>
-          <div className="detailDivider" aria-hidden="true" />
-          <p>
-            Nestled in the mountains of Nayarit, Mexico, Santa Maria del Oro is
-            a magical place of lakes, jungle, and natural beauty.
-          </p>
-          <p>
-            A peaceful, private retreat center where you can exhale, be held by
-            nature, and go deep.
-          </p>
-        </article>
+      <section className="settingSection" id="location">
+        <Image
+          src="/hotel-laguna-view.webp"
+          alt="Lagoon and mountains near the retreat setting"
+          fill
+          className="coverImage"
+        />
+        <div className="settingOverlay" />
+        <div className="settingInner section">
+          <article className="settingCopy">
+            <h2 className="detailHeading">The Setting</h2>
+            <div className="detailDivider" aria-hidden="true" />
+            <h3>
+              Nestled in the mountains of Nayarit, Mexico, Santa Maria del Oro
+              is a magical place of lakes, jungle, and natural beauty.
+            </h3>
+            <div className="detailDivider" aria-hidden="true" />
+            <p className="settingSerifText">
+              A peaceful, private retreat center where you can exhale, be held
+              by nature, and go deep.
+            </p>
+          </article>
+        </div>
+      </section>
 
-        <article className="detailImageBlock">
-          <Image
-            src="/hotel-laguna-view.webp"
-            alt="Lagoon and mountains near the retreat setting"
-            fill
-            className="coverImage"
-          />
-        </article>
+      <section className="roomSection">
+        <div className="roomIntro section">
+          <h2>A Place to Rest and Integrate</h2>
+          <p>
+            Transformation happens in the workshop. Integration happens in the
+            quiet moments between. Our rooms are designed to support the deeper
+            purpose of the retreat: creating enough space to slow down, reflect,
+            and reconnect with yourself.
+          </p>
+        </div>
 
+        <div className="roomSplit">
+          <article className="roomImageWrap">
+            <Image
+              src="/KingRoom5.webp"
+              alt="King room with calm natural light and restful atmosphere"
+              fill
+              className="coverImage"
+            />
+          </article>
+
+          <article className="roomCopy section">
+            <p className="roomEyebrow">King Room</p>
+            <h3>Privacy. Space. Deep Rest.</h3>
+            <p className="roomDescription">
+              Perfect for guests seeking privacy and personal space.
+            </p>
+            <ul className="roomAmenities">
+              <li>King bed</li>
+              <li>Private bathroom</li>
+              <li>Lake view</li>
+              <li>Single or Double occupancy</li>
+            </ul>
+          </article>
+        </div>
+
+        <div className="roomSplit roomSplitReverse">
+          <article className="roomImageWrap">
+            <Image
+              src="/DoubleKingRoom2.png"
+              alt="Double king room with spacious shared sleeping arrangement"
+              fill
+              className="coverImage"
+            />
+          </article>
+
+          <article className="roomCopy section">
+            <p className="roomEyebrow">Double King Room</p>
+            <h3>Share the Journey. Rest Together.</h3>
+            <p className="roomDescription">
+              A comfortable shared option with two king beds and plenty of room
+              to relax.
+            </p>
+            <ul className="roomAmenities">
+              <li>Two king beds</li>
+              <li>Private bathroom</li>
+              <li>Garden view</li>
+              <li>Double occupancy</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section className="detailsSection section">
         <article className="detailBlock" id="details">
           <h2 className="detailHeading">Quick Details</h2>
           <div className="detailDivider" aria-hidden="true" />
