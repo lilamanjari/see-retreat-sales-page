@@ -31,8 +31,8 @@ const differentiators = [
   },
   {
     icon: "/symbols/2-plant-medicine.png",
-    title: "Plant medicine as support.",
-    text: "We don't view plant medicine as the transformation itself. We use it as a tool to go deeper, with preparation, intention, and integration.",
+    title: "Psilocybin as support.",
+    text: "We don't view psilocybin as the transformation itself. We use it as a tool to go deeper, with preparation, intention, and integration.",
   },
   {
     icon: "/symbols/3-community.png",
