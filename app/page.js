@@ -430,12 +430,16 @@ export default function Home() {
             <p className="roomEyebrow">King Room</p>
             <h3>Privacy. Space. Deep Rest.</h3>
             <p className="roomDescription">
-              Perfect for guests seeking privacy and personal space.
+              Perfect for couples or guests seeking privacy and personal space,
+              these beautiful rooms have a private patio and bathtub. The room
+              is set with comfortable lighting and a splendid view of the lush
+              nature outside!
             </p>
             <ul className="roomAmenities">
               <li>King bed</li>
               <li>Private bathroom</li>
-              <li>Lake view</li>
+              <li>Bathtub</li>
+              <li>Patio</li>
               <li>Single or Double occupancy</li>
             </ul>
           </article>
@@ -455,13 +459,16 @@ export default function Home() {
             <p className="roomEyebrow">Double King Room</p>
             <h3>Share the Journey. Rest Together.</h3>
             <p className="roomDescription">
-              A comfortable shared option with two king beds and plenty of room
-              to relax.
+              Joining with your bestie? This room is a comfortable shared option
+              with two king beds and plenty of room to relax. Step out on the
+              terrace and inhale the fresh jungle air, or take a moment of
+              relaxing integration in the big bathtub.
             </p>
             <ul className="roomAmenities">
               <li>Two king beds</li>
               <li>Private bathroom</li>
-              <li>Garden view</li>
+              <li>Bathtub</li>
+              <li>Patio</li>
               <li>Double occupancy</li>
             </ul>
           </article>
