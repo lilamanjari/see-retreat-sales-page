@@ -86,13 +86,13 @@ const journeySteps = [
 ];
 
 const exploreItems = [
-  "Why we create emotional suffering",
-  "Projection and relationship patterns",
-  "Self-deception and defense mechanisms",
-  "Fear, pride and unconscious behavior",
-  "Responsibility and freedom",
-  "Conscious decision-making",
-  "Living from clarity rather than conditioning",
+  "How to stop creating emotional suffering",
+  "How to break repeated relationship patterns",
+  "How to stop sabotaging your life with self-deception and defense mechanisms",
+  "How to overcome fear, pride and unconscious motivations in your life",
+  "How to access freedom by becoming responsible",
+  "How to make decisions from a conscious place",
+  "How to live from clarity and choice rather than conditioning",
 ];
 
 const team = [
@@ -104,31 +104,31 @@ const team = [
   },
   {
     name: "Laila Frotjold",
-    role: "Curriculum & Experience Designer",
-    bio: "Laila is an experienced space holder and expert workshop facilitator. She will be our guide through the entire journey.",
+    role: "Retreat Facilitator",
+    bio: "Yoga teacher and passionate about authentic self expression, Laila is an experienced space holder and expert workshop facilitator. She will be our guide through the entire journey.",
     image: "/laila2.png",
   },
   {
     name: "Itzel Chela",
-    role: "Operations & Guest Experience",
+    role: "Ceremonial Space Holder and Workshop Facilitator",
     bio: "Itzel holds ceremonial space and workshops with warmth, intuition, and attention to detail, ensuring you feel supported every step of the way.",
     image:
       "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=320&q=80",
   },
-  {
+  /* {
     name: "Plant Medicine Facilitator",
     role: "To Be Announced",
     bio: "An experienced guide in traditional ceremony, holding a safe, sacred space for deep inner exploration and healing.",
     image: null,
-  },
+  }, */
 ];
 
 const quickDetails = [
-  ["Aug 31 - Sep 6, 2025", "First week of September 2025"],
+  ["Aug 31 - Sep 6, 2025", "We gather the first week of September 2025"],
   ["Tepic Airport (TPQ)", "Approx. 30 min to retreat center"],
   [
     "From $2,222 USD (Double occupancy)",
-    "Early bird until July 15: $1,999 USD",
+    "Early bird until July 20th: $1,997 USD",
   ],
   ["Includes", "Accommodation, meals, ceremonies, and more."],
 ];
@@ -327,7 +327,7 @@ export default function Home() {
       <section className="exploreSection">
         <div className="exploreCopy section">
           <div className="exploreText">
-            <h2 className="exploreHeading">What You&apos;ll Explore</h2>
+            <h2 className="exploreHeading">What You&apos;ll Learn</h2>
             <div className="exploreDivider" aria-hidden="true" />
             <ul className="exploreList">
               {exploreItems.map((item) => (
@@ -349,28 +349,33 @@ export default function Home() {
       <section className="teamSection">
         <div className="section teamSectionInner">
           <h2 className="teamHeading">The Team</h2>
-          <div className="teamGrid">
-          {team.map((member) => (
-            <article key={member.name} className="teamCard">
-              <div className="teamAvatar">
-                {member.image ? (
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    fill
-                    className="coverImage"
-                  />
-                ) : (
-                  <div className="avatarFallback" aria-hidden="true" />
-                )}
-              </div>
-              <div>
-                <h3>{member.name}</h3>
-                <p className="teamRole">{member.role}</p>
-                <p>{member.bio}</p>
-              </div>
-            </article>
-          ))}
+          <div
+            className="teamGrid"
+            style={{
+              gridTemplateColumns: `repeat(${team.length}, minmax(0, 1fr))`,
+            }}
+          >
+            {team.map((member) => (
+              <article key={member.name} className="teamCard">
+                <div className="teamAvatar">
+                  {member.image ? (
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      fill
+                      className="coverImage"
+                    />
+                  ) : (
+                    <div className="avatarFallback" aria-hidden="true" />
+                  )}
+                </div>
+                <div>
+                  <h3>{member.name}</h3>
+                  <p className="teamRole">{member.role}</p>
+                  <p>{member.bio}</p>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
