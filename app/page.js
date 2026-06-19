@@ -99,7 +99,7 @@ const team = [
   {
     name: "Jack Levy",
     role: "Founder & Lead Teacher",
-    bio: "Over two decades of deep study, Jack has developed precise insights into the intricate details of human psychology. He guides people to recognize the unconscious patterns that keep them trapped so they can live with clarity and freedom.",
+    bio: "Over two decades of deep study, Jack has developed precise insights into the intricate details of human psychology. He expertly guides people to recognize the unconscious patterns that keep them trapped so they can live with clarity and freedom.",
     image: "/jack.png",
   },
   {
