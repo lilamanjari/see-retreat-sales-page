@@ -90,7 +90,7 @@ const exploreItems = [
   "How to break repeated relationship patterns",
   "How to stop sabotaging your life with self-deception and defense mechanisms",
   "How to overcome fear, pride and unconscious motivations in your life",
-  "How to access freedom by becoming responsible",
+  "How to access freedom in your life",
   "How to make decisions from a conscious place",
   "How to live from clarity and choice rather than conditioning",
 ];
