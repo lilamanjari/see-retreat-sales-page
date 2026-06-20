@@ -112,8 +112,7 @@ const team = [
     name: "Itzel Chela",
     role: "Ceremonial Space Holder and Workshop Facilitator",
     bio: "Itzel holds ceremonial space and workshops with warmth, intuition, and attention to detail, ensuring you feel supported every step of the way.",
-    image:
-      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=320&q=80",
+    image: "/Itzel.png",
   },
   /* {
     name: "Plant Medicine Facilitator",
