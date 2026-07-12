@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { CalendarDays, MapPin } from "lucide-react";
+import ContactForm from "./components/ContactForm";
 import TestimonialCarousel from "./components/TestimonialCarousel";
 
 const testimonials = [
@@ -264,18 +265,7 @@ export default function Home() {
             We want YOU to have this knowledge. We want everyone to have it!
           </p>
           <p>And it starts here.</p>
-          <p>Watch this short video to learn more:</p>
           <p className="signature">Jack Levy</p>
-          <a href="#apply" className="buttonSecondary">
-            <span className="buttonPlayIcon" aria-hidden="true" />
-            Watch Video
-          </a>
-        </div>
-
-        <div className="videoPlaceholder" aria-label="Video placeholder">
-          <div className="videoShade" />
-          <div className="playButton" />
-          <div className="videoCaption">Founder video placeholder</div>
         </div>
       </section>
 
@@ -502,6 +492,20 @@ export default function Home() {
             Spots are limited! Reserve your spot today.
           </p>
         </article>
+      </section>
+
+      <section className="contactSection">
+        <div className="section contactInner">
+          <div className="contactCopy">
+            <h2>Questions?</h2>
+            <p>
+              If you&apos;re wondering whether SEE is the right fit, send us a
+              message and we&apos;ll get back to you.
+            </p>
+          </div>
+
+          <ContactForm />
+        </div>
       </section>
     </main>
   );
