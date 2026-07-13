@@ -224,7 +224,12 @@ export default function Home() {
             </div>
           </div>
 
-          <a href="#apply" className="buttonPrimary">
+          <a
+            href="https://tally.so/r/9qxXaX"
+            target="_blank"
+            rel="noreferrer"
+            className="buttonPrimary"
+          >
             Apply Now
           </a>
         </div>
@@ -485,7 +490,12 @@ export default function Home() {
             SEE is an intimate experience with a limited number of participants.
             Please apply to see if this retreat is the right fit for you.
           </p>
-          <a href="#overview" className="buttonPrimary">
+          <a
+            href="https://tally.so/r/9qxXaX"
+            target="_blank"
+            rel="noreferrer"
+            className="buttonPrimary"
+          >
             Apply Now
           </a>
           <p className="applyNote">
