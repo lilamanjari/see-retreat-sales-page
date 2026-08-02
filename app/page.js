@@ -124,7 +124,7 @@ const team = [
 ];
 
 const quickDetails = [
-  ["Sep 7 - Sep 13, 2026", "We gather September 7-13, 2026"],
+  ["Sep 6 - Sep 12, 2026", "We gather September 6-12, 2026"],
   ["Tepic Airport (TPQ)", "Approx. 30 min to retreat center"],
   [
     "From $2,222 USD (Double occupancy)",
@@ -211,7 +211,7 @@ export default function Home() {
                 <CalendarDays strokeWidth={1.75} />
               </span>
               <div>
-                <strong>Sep 7 - Sep 13, 2026</strong>
+                <strong>Sep 6 - Sep 12, 2026</strong>
               </div>
             </div>
             <div>
