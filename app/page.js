@@ -55,18 +55,18 @@ const differentiators = [
 const journeySteps = [
   ["Arrive & Exhale", "Land, settle in, and open.", "/symbols-2/1-tree.png"],
   [
-    "Breaking The Illusion",
+    "SEEing The Illusion",
     "SEE the person you became and how you create reality.",
     "/symbols-2/2-sunrise.png",
   ],
   [
-    "Deeper Truth",
-    "SEE the patterns and reclaim your power.",
+    "The Intelligence of Emotion",
+    "Listen and connect to yourself and others.",
     "/symbols-2/3-talking.png",
   ],
   [
-    "Free Yourself",
-    "SEE through the compassionate lens of psilocybin, going deeper with support and safety.",
+    "SEEing the Invisible Chains",
+    "Let go of the chains. SEE through the compassionate lens of psilocybin.",
     "/symbols-2/4-compassion-2.png",
   ],
   [
