@@ -124,7 +124,7 @@ const team = [
 ];
 
 const quickDetails = [
-  ["Sep 6 - Sep 12, 2026", "We gather September 6-12, 2026"],
+  ["Sep 19 - Sep 22, 2026", "We gather September 19-22, 2026"],
   ["Tepic Airport (TPQ)", "Approx. 30 min to retreat center"],
   [
     "From $2,222 USD (Double occupancy)",
@@ -192,7 +192,7 @@ export default function Home() {
 
         <div className="heroContent">
           <h1>SEE</h1>
-          <p className="heroSubheading">A 7-day transformational retreat</p>
+          <p className="heroSubheading">A 4-day transformational retreat</p>
           <div className="heroDivider" />
           <p className="heroQuote">We suffer because we cannot see clearly.</p>
           <p className="heroQuote">
@@ -211,7 +211,7 @@ export default function Home() {
                 <CalendarDays strokeWidth={1.75} />
               </span>
               <div>
-                <strong>Sep 6 - Sep 12, 2026</strong>
+                <strong>Sep 19 - Sep 22, 2026</strong>
               </div>
             </div>
             <div>
